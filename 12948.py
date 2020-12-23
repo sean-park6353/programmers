@@ -1,9 +1,9 @@
 def solution(phone_number):
     tmp = phone_number[-4:]
-    result = phone_number.strip(tmp)
+    result = phone_number[0:-4]
     answer = result
     answer = "*"*len(result)+tmp
     return answer
 
 
-solution('01033334444')
+print(solution('21551241'))
