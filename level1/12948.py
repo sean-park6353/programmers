@@ -4,6 +4,3 @@ def solution(phone_number):
     answer = result
     answer = "*"*len(result)+tmp
     return answer
-
-
-print(solution('21551241'))
