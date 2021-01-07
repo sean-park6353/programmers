@@ -23,4 +23,4 @@ def solution(N, stages):
     return q
 
 
-print(solution(3, [1, 2]))
+solution(5, [1, 2, 3, 3, 5])
