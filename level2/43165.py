@@ -13,7 +13,7 @@ def solution(numbers, target):
     print(tmp)
 
 
-solution([1, 1, 1, 1, 1], 3)
+# solution([1, 1, 1, 1, 1], 3)
 #     while True:
 #         flg = random.randrange(1, 3)
 #         if flg == 1:
