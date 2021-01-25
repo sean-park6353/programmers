@@ -1,5 +1,6 @@
 def solution(arr):
     arr.sort()
+    
     answer=True
     for i in range(len(arr)-1):
         if arr[i+1].startswith(arr[i]):
