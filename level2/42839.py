@@ -38,5 +38,4 @@ def solution(numbers):
         if is_prime(i):
             answer+=1
     return answer
-
-print(solution("17"))
+solution("17")
