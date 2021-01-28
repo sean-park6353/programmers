@@ -1,6 +1,5 @@
 from itertools import permutations
 
-
 def is_prime(n):
     if n<2:
         return False
@@ -39,6 +38,5 @@ def solution(numbers):
         if is_prime(i):
             answer+=1
     return answer
-
 
 print(solution("17"))
