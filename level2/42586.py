@@ -1,11 +1,6 @@
 from collections import deque
-# arr=[95,90,99,99,80,99]
-# speed=[1,1,1,1,1,1]
-# arr=[93,30,55]
-# speed=[1,30,5]
 arr= deque([40,93,30,55,60,65])
 speed=deque([60,1,30,5,10,7])
-
 
 def solution(arr,speed):
     q=deque([])
