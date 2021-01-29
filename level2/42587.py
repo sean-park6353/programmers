@@ -15,6 +15,4 @@ def solution(arr, user):
             cnt += 1
         else:
             q.append(q.popleft())
-    print(15)
-    print(34)
     return cnt
