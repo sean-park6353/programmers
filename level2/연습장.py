@@ -1,13 +1,18 @@
-arr = []
-while True:
-    a, b = map(int, input().split(' '))
-    if a == 0 and b == 0:
-        break
-    if b % a == 0:
-        arr.append('factor')
-    elif a % b == 0:
-        arr.append('multiple')
+# n=9
+# arr=[0,12345678,1,2,0,0,0,0,32]
+import heapq,sys
+arr=[]
+result=[]
+heapq.heapify(result)
+n=int(sys.stdin.readline())
+for i in range(n):
+    arr.append(int(sys.stdin.readline()))
+for i in range(n):
+    if arr[i]==0:
+        if len(result)==0:
+            print(0)
+            continue
+        else:
+            print(heapq.heappop(result))   
     else:
-        arr.append('neither')
-for i in arr:
-    print(i)
+        heapq.heappush(result,arr[i])
