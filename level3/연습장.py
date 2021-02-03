@@ -1,16 +1,15 @@
-import sys
-n=int(sys.stdin.readline())
-arr=[]
-dpa=[1,0]
-dpb=[0,1]
-for i in range(n):
-    a=int(sys.stdin.readline())
-    if a==0:
-        print(1,0)
-        continue
-    for i in range(2,a+1):
-        dpa.append(dpa[i-2]+dpa[i-1])
-    for i in range(2,a+1):
-        dpb.append(dpb[i-2]+dpb[i-1])
-    print(dpa[-1],dpb[-1])
+arr=[2,3,4,5,11,10]
+start=0
+end=4
+target=13
 
+answer=[]
+while start!=end:
+    if arr[start]+arr[end]>target:
+        end-=1
+    elif arr[start]+arr[end]<target:
+        start+=1
+    else:
+        answer=[start,end]
+        break
+print(answer)

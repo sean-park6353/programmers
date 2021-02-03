@@ -38,4 +38,4 @@ def solution(operations):
             delete(q,num)
     return [max(q),min(q)]
 # operations=["I -45","I 653","D 1","I -642","I 45","I 97","D 1","D -1","I 333"]
-print(solution(operations))
+# print(solution(operations))
