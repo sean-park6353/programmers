@@ -1,27 +1,26 @@
 
-def solution(a, arr):
+def solution(skill, skill_trees):
     cnt=0
-    for k in arr:
-        answer=[]
-        for i in k:
-            if i in a:
-                answer.append(i)
-        result=''.join(answer)
-        if len(a)==len(result):
-            if a==result:
+    for s in skill_trees:
+        essential=[] # 필수 스킬들만 저장할 리스트
+        for alpha in s:
+            if alpha in skill:   # 필수 스킬들만 뽑아서 essentail에 넣는다.
+                essential.append(alpha)
+        present_skill_tree=''.join(essential)
+        if len(skill)==len(present_skill_tree):
+            if skill==present_skill_tree:
                 cnt+=1
-
         else:
-            tmp=0
-            for i in range(len(result)):
-                if result[i]==a[i]:
-                    tmp+=1
-            if tmp==len(result):
+            flg=0
+            for i in range(len(present_skill_tree)):
+                if present_skill_tree[i]==skill[i]:
+                    flg+=1
+            if flg==len(present_skill_tree): 
                 cnt+=1
     return cnt
 
 
 a="cbd"
-arr=["bacde","cbadf","aecb","bda","cxpvd"]
+skill_trees=["bacde","cbadf","aecb","bda","cxpvd"]
 
-print(solution(a,arr))
+print(solution(a,skill_trees))
